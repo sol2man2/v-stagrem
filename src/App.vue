@@ -35,17 +35,17 @@ export default {
     return  {
       menus: [
         {
-          path: '/me',
+          path: '/v-stagrem/me',
           icon: 'person',
           title: '내정보'
         },
         {
-          path: '/feeds',
+          path: '/v-stagrem/feeds',
           icon: 'list',
           title: '내피드'
         },
         {
-          path: '/search',
+          path: '/v-stagrem/search',
           icon: 'search',
           title: '태그검색'
         }

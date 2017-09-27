@@ -289,22 +289,22 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_1_vue
 const router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
   mode: 'history',
   routes: [{
-    path: '/',
-    redirect: '/me'
+    path: '/v-stagrem',
+    redirect: '/v-stagrem/me'
   }, {
-    path: '/me',
+    path: '/v-stagrem/me',
     name: 'MyInfo',
     component: __WEBPACK_IMPORTED_MODULE_3__components_MyInfo__["a" /* default */]
   }, {
-    path: '/feeds',
+    path: '/v-stagrem/feeds',
     name: 'MyFeed',
     component: __WEBPACK_IMPORTED_MODULE_4__components_MyFeed__["a" /* default */]
   }, {
-    path: '/search',
+    path: '/v-stagrem/search',
     name: 'TagSearch',
     component: __WEBPACK_IMPORTED_MODULE_5__components_TagSearch__["a" /* default */]
   }, {
-    path: '/login',
+    path: '/v-stagrem/login',
     name: 'Login',
     component: __WEBPACK_IMPORTED_MODULE_2__components_Login__["a" /* default */]
   }]
@@ -317,10 +317,10 @@ router.beforeEach((to, from, next) => {
       const tokenHash = to.hash;
       const tokenValue = tokenHash.split('=')[1];
       localStorage.setItem('token', tokenValue);
-      next('/me');
+      next('/v-stagrem/me');
       return;
     }
-    next('/login');
+    next('/v-stagrem/login');
     return;
   }
   next();
@@ -619,15 +619,15 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
   data() {
     return {
       menus: [{
-        path: '/me',
+        path: '/v-stagrem/me',
         icon: 'person',
         title: '내정보'
       }, {
-        path: '/feeds',
+        path: '/v-stagrem/feeds',
         icon: 'list',
         title: '내피드'
       }, {
-        path: '/search',
+        path: '/v-stagrem/search',
         icon: 'search',
         title: '태그검색'
       }]
@@ -673,4 +673,4 @@ var Component = normalizeComponent(
 /***/ })
 
 },["NHnr"]);
-//# sourceMappingURL=app.b95992c912c16823f6d2.js.map
+//# sourceMappingURL=app.f6bc1985c6709363f80b.js.map

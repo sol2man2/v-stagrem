@@ -11,26 +11,26 @@ const router = new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
-      redirect: '/me'
+      path: '/v-stagrem',
+      redirect: '/v-stagrem/me'
     },
     {
-      path: '/me',
+      path: '/v-stagrem/me',
       name: 'MyInfo',
       component: MyInfo
     },
     {
-      path: '/feeds',
+      path: '/v-stagrem/feeds',
       name: 'MyFeed',
       component: MyFeed
     },
     {
-      path: '/search',
+      path: '/v-stagrem/search',
       name: 'TagSearch',
       component: TagSearch
     },
     {
-      path: '/login',
+      path: '/v-stagrem/login',
       name: 'Login',
       component: Login
     }
@@ -44,10 +44,10 @@ router.beforeEach((to, from, next) => {
       const tokenHash = to.hash
       const tokenValue = tokenHash.split('=')[1]
       localStorage.setItem('token', tokenValue)
-      next('/me')
+      next('/v-stagrem/me')
       return
     }
-    next('/login')
+    next('/v-stagrem/login')
     return
   }
   next()
