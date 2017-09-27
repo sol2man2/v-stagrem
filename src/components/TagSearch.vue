@@ -23,7 +23,7 @@ import Feed from './Feed'
 
 export default {
   name: 'TagSearch',
-  data() {
+  data () {
     return {
       isLoading: true,
       tagName: '',

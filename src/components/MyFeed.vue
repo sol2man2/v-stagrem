@@ -25,13 +25,13 @@ import Feed from './Feed'
 
 export default {
   name: 'MyFeed',
-  data() {
+  data () {
     return {
       isLoading: true,
       feeds: []
     }
   },
-  mounted() {
+  mounted () {
     const token = localStorage.getItem('token')
     jsonp(`https://api.instagram.com/v1/users/self/media/recent?access_token=${token}`, null,
       (_, res) => {

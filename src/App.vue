@@ -53,7 +53,7 @@ export default {
     }
   },
   methods: {
-    toggle() {
+    toggle () {
       this.$refs.sidenav.toggle()
     }
   }
